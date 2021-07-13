@@ -18,11 +18,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // locationManagerの作成
         locationManager = CLLocationManager()
         
         // 現在位置を取得するリクエストを表示
-        guard let locationManager = locationManager else { return }
         locationManager.requestWhenInUseAuthorization()
         
         // 位置情報の取得を開始
@@ -70,4 +69,3 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         return myCircleView
     }
 }
-

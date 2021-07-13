@@ -59,6 +59,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView.addOverlay(myCircle)
     }
     
+    // AddOverlayされた時に呼ばれる（円の色の変更とかができる）
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         // rendererを生成.
         let myCircleView: MKCircleRenderer = MKCircleRenderer(overlay: overlay)
